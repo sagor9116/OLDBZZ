@@ -114,14 +114,18 @@ h4 {
    ========================================================================== */
 .about,
 .services,
-.why {
+.why,
+.portfolio,
+.testimonial {
   padding: 3.125rem 1.25rem;
 }
 
 @media (min-width: 900px) {
   .about,
   .services,
-  .why {
+  .why,
+  .portfolio,
+  .testimonial {
     padding: 6.25rem 1.25rem;
   }
 }
@@ -719,5 +723,204 @@ header nav ul a {
 
 .why .analytics .title {
   font-size: var(--small);
+}
+
+/* ==========================================================================
+   PORTFOLIO
+   ========================================================================== */
+.portfolio .grid {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-auto-rows: 125px;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .portfolio .grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .portfolio .grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.portfolio .col {
+  position: relative;
+}
+
+.portfolio .col img {
+  position: relative;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.portfolio .col .bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  border-radius: 12px;
+}
+
+.portfolio .col .content {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+  opacity: 0;
+}
+
+.portfolio .col .content span:nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.portfolio .col .content p:nth-child(2) {
+  margin-bottom: 4px;
+}
+
+.portfolio .col .content svg {
+  cursor: pointer;
+  font-size: 1.125rem;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #004289;
+}
+
+.portfolio .col:hover {
+  cursor: pointer;
+}
+
+.portfolio .col:hover .bg {
+  background-color: rgba(0, 59, 122, 0.7);
+}
+
+.portfolio .col:hover .content {
+  opacity: 1;
+}
+
+.portfolio .photo-1 {
+  grid-row: span 3;
+}
+
+.portfolio .photo-2,
+.portfolio .photo-6,
+.portfolio .photo-7,
+.portfolio .photo-8 {
+  grid-row: span 2;
+}
+
+.portfolio .photo-3,
+.portfolio .photo-4,
+.portfolio .photo-5 {
+  grid-row: span 5;
+}
+
+/* ==========================================================================
+   TESTIMONIAL
+   ========================================================================== */
+.testimonial {
+  background-color: var(--section-color);
+  -webkit-box-shadow: inset 0 0 12px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.testimonial .owl-carousel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial img {
+  width: 120px !important;
+  height: 120px !important;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  margin: 0 0 20px 0;
+}
+
+@media (min-width: 600px) {
+  .testimonial img {
+    margin: 0 20px 0 0;
+  }
+}
+
+.testimonial .flex-row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 600px) {
+  .testimonial .flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.testimonial .flex-row h2 {
+  font-size: var(--medium);
+  color: #111;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .testimonial .flex-row h2 {
+    text-align: start;
+  }
+}
+
+.testimonial .flex-row h4 {
+  font-size: var(--small);
+  font-weight: 400;
+  margin: 0 0 8px 0;
+  color: #999;
+}
+
+.testimonial .flex-row p {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 /*# sourceMappingURL=styles.css.map */

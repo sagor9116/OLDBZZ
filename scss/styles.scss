@@ -113,7 +113,9 @@ h4 {
    ========================================================================== */
    .about,
    .services,
-   .why {
+   .why,
+   .portfolio,
+   .testimonial {
      padding: 3.125rem 1.25rem;
      @media (min-width:900px) {
        padding: 6.25rem 1.25rem;
@@ -552,6 +554,172 @@ header {
   }
 }
 
+/* ==========================================================================
+   PORTFOLIO
+   ========================================================================== */
 
+.portfolio {
+ 
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 125px;
+    gap: 1rem;
+
+    @media (min-width:600px) {
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    @media (min-width:900px) {
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+
+  // default for photo gallery
+
+  .col {
+    position: relative;
+
+    img {
+      position:relative;
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+    }
+
+    .bg {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s ease all;
+      border-radius: 12px;
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: var(--white);
+      opacity: 0;
+
+      span:nth-child(1) {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      p:nth-child(2) {
+        margin-bottom: 4px;
+      }
+
+      svg {
+        cursor: pointer;
+        font-size: 1.125rem;
+        padding: 10px;
+        border-radius: 12px;
+        background-color: #004289;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      .bg {
+        background-color: rgba(0,59,122,0.7);
+      }
+
+      .content {
+        opacity: 1;
+      }
+    }
+  }
+
+  .photo-1 {
+    grid-row: span 3;
+  }
+
+
+  .photo-2,
+  .photo-6,
+  .photo-7,
+  .photo-8 {
+    grid-row: span 2;
+  }
+
+  .photo-3,
+  .photo-4,
+  .photo-5
+   {
+    grid-row: span 5;
+  }
+}
+
+/* ==========================================================================
+   TESTIMONIAL
+   ========================================================================== */
+ .testimonial {
+  background-color: var(--section-color);
+  box-shadow: inset 0 0 12px 0 rgba(0,0,0, 0.1);
+
+  .owl-carousel {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 120px !important;
+    height: 120px !important;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    margin: 0 0 20px 0;
+
+    @media (min-width:600px) {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  .flex-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width:600px) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    h2 {
+      font-size: var(--medium);
+      color: #111;
+      margin: 0 0 8px 0;
+      font-weight: 600;
+
+      @media (min-width:600px) {
+        text-align: start;
+      }
+    }
+
+    h4 {
+      font-size: var(--small);
+      font-weight: 400;
+      margin: 0 0 8px 0;
+      color: #999;
+    }
+
+    p {
+      font-family: sans-serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+}
 
 
