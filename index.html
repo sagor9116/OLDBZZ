@@ -16,23 +16,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- font-awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
   <!-- stylesheet -->
   <link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
+  <!-- mobile navigation -->
+  <div class="mobile-bg display-none" id="mobile-bg">
+    <i class="far fa-times-circle close-btn" id="close-btn"></i>
+    <ul class="mobile-nav" id="mobile-nav">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </div>
+
+
   <!-- HEADER -->
   <header>
-    <nav class="container">
+    <nav class="container navbar">
       <a href="#" class="logo">OLDBIZZ</a>
+      <i class="fas fa-bars toggle-icon" id="toggle-icon"></i>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact Us</a></li>
       </ul>
     </nav>
     <!-- nav -->
@@ -40,7 +54,7 @@
   <!-- header -->
 
   <!-- HERO SECTION -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="container flex-row">
       <div class="left">
         <h1>
@@ -62,7 +76,7 @@
   <!-- .hero -->
 
   <!-- ABOUT US SECTION -->
-  <section class="about about-1">
+  <section class="about about-1" id="about">
     <div class="container">
       <h2>About Us</h2>
       <div class="flex-row">
@@ -123,7 +137,7 @@
   <!-- .about2 -->
 
   <!-- SERVICES SECTION -->
-  <section class="services">
+  <section class="services" id="services">
     <div class="container">
       <h2>Services</h2>
       <div class="grid">
@@ -425,6 +439,138 @@
   </section>
   <!-- .testimonial -->
 
+  <!-- TEAM SECTION -->
+  <section class="team" id="team">
+    <div class="container">
+      <h2>Teams</h2>
+      <div class="flex-row">
+        <div class="col">
+          <img src="/images/team1.jpg" alt="">
+          <div class="bg"></div>
+          <div class="info">
+            <p>Thomas Anderson</p>
+            <p>CEO</p>
+          </div>
+        </div>
+        <!-- .col -->
+
+        <div class="col">
+          <img src="/images/team2.jpg" alt="">
+          <div class="bg"></div>
+          <div class="info">
+            <p>Ricky Bale</p>
+            <p>CTO</p>
+          </div>
+        </div>
+        <!-- .col -->
+
+        <div class="col">
+          <img src="/images/team3.jpg" alt="">
+          <div class="bg"></div>
+          <div class="info">
+            <p>Jeeny Simpson</p>
+            <p>Senior Developer</p>
+          </div>
+        </div>
+        <!-- .col -->
+
+        <div class="col">
+          <img src="/images/team4.jpg" alt="">
+          <div class="bg"></div>
+          <div class="info">
+            <p>Errica James</p>
+            <p>Web Developer</p>
+          </div>
+        </div>
+        <!-- .col -->
+      </div>
+      <!-- .flex-row -->
+    </div>
+    <!-- .container -->
+  </section>
+  <!-- .team -->
+
+  <!-- CLIENT  SECTION -->
+  <section class="clients">
+    <div class="container">
+      <h2>Our Clients</h2>
+      <div class="flex-row">
+        <div class="col">
+          <img src="/images/client-1.png" alt="">
+        </div>
+        <div class="col">
+          <img src="/images/client-2.png" alt="">
+        </div>
+        <div class="col">
+          <img src="/images/client-3.png" alt="">
+        </div>
+        <div class="col">
+          <img src="/images/client-4.png" alt="">
+        </div>
+        <div class="col">
+          <img src="/images/client-5.png" alt="">
+        </div>
+        <div class="col">
+          <img src="/images/client-6.png" alt="">
+        </div>
+        <div class="col">
+          <img src="/images/client-7.png" alt="">
+        </div>
+        <div class="col">
+          <img src="/images/client-8.png" alt="">
+        </div>
+      </div>
+      <!-- .flex-row -->
+    </div>
+    <!-- .container -->
+  </section>
+  <!-- .clients -->
+
+  <!-- CONTACT-US SECTION -->
+  <section class="contact-us" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Want to work with us on a future project? Fill the form below to get statred</p>
+      <form>
+        <div class="flex-row">
+          <input type="search" class="full-name" placeholder="Your Name">
+          <input type="email" class="email-address" placeholder="Your Email">
+        </div>
+        <!-- .flex-row -->
+        <input type="search" class="subject" placeholder="Subject">
+        <textarea class="message" placeholder="Message"></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <!-- form -->
+    </div>
+    <!-- .container -->
+  </section>
+  <!-- .contact-us -->
+
+  <footer>
+    <div class="container">
+      <ul class="flex-row">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <ul class="flex-row">
+        <li><i class="fab fa-facebook-f media-icon"></i></li>
+        <li><i class="fab fa-twitter media-icon"></i></li>
+        <li><i class="fab fa-instagram media-icon"></i></li>
+        <li><i class="fab fa-linkedin-in media-icon"></i></li>
+        <li><i class="fab fa-dribbble media-icon"></i></li>
+      </ul>
+      <p>&copy; 2021 OLDBIZZ</p>
+    </div>
+    <!-- .container -->
+  </footer>
+  <!-- footer -->
+
+
+
 
 
 
@@ -447,7 +593,7 @@
 
   <!-- SCRIPTS -->
   <!-- font-awesome -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js" integrity="sha512-cyAbuGborsD25bhT/uz++wPqrh5cqPh1ULJz4NSpN9ktWcA6Hnh9g+CWKeNx2R0fgQt+ybRXdabSBgYXkQTTmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
      
      <!-- owl-carousel -->
      <script src="/owl-carousel/jquery.min.js"></script>

@@ -1,4 +1,3 @@
-
 // owl-carousel
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel();
@@ -17,3 +16,6 @@ $('.owl-carousel').owlCarousel({
         },
     },
 })
+
+// mobile nav
+
